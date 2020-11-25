@@ -1,0 +1,51 @@
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int p1,p2,Ran,b=30,t=60,w=5;
+    cout<<"Enter the type of ball you want to bowl (0-6)";
+    cin>>p1;
+    cout<<"Enter the runs you want this ball";
+    cin<<p2;
+    Ran= rand(0,100);
+    if(p1>0 && p1<7 && b>0 && p2>0 && p2<7 && p2!=3 && w>0){
+        switch(p2){
+            case 0:{
+                if(Ran>10){cout<<"you have scored "<<p2<<"runs in this ball.Still needed"<<t-0;t-=0;}
+                else{ cout<<"OUT"; w--;}}
+            break;
+            case 1:{
+                if(Ran>15){cout<<"you have scored "<<p2<<"runs in this ball. Still needed"<<t-1;t-=1;}
+                else{ cout<<"OUT"; w--;}}
+            break;
+            case 2:{
+                if(Ran>40){cout<<"you have scored "<<p2<<"runs in this ball. Still needed"<<t-2;t-=2;}
+                else{ cout<<"OUT"; w--;}}
+            break;
+            case 4:{
+                if(Ran>65){cout<<"Good! you have scored "<<p2<<"runs in this ball. Still needed"<<t-4;t-=4;}
+                else{ cout<<"OUT"; w--;}}
+            break;
+            case 6:{
+                if(Ran>80){cout<<"Great!! you have scored "<<p2<<"runs in this ball. Still needed"<<t-6;t-=6;}
+                else{ cout<<"OUT"; w--;}}
+            break;
+            default: cout<<"3 runs is quite rare in cricket [or] yours runs can't be got in 1 ball";
+            break;
+        }
+        b--;
+        if(b%6==0)
+        cout<<"Over-up. No.of overs left"<<5-(b/6);
+        if(w==0)
+        cout<<"ALL-OUT";
+    }
+    if(b==0 (t>0 || w==0))
+        cout<<"bowling team wins(p1)";
+    else
+        cour<<"batting team wins(p2)";
+    return 0;
+}
